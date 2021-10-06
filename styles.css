@@ -1,0 +1,238 @@
+:root{
+  --green: #213e3b;
+  --deep-blue: #41aea9;
+  --medium-blue: #a6f6f1;
+  --light-blue: #e8ffff;
+  --white: #FFF;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*#213e3b --deep green
+  #41aea9 --deep blue
+  #a6f6f1 --medium blue
+  #e8ffff --light blue
+*/
+/* .clearfix::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.navbar{
+  background-color: #213e3b;
+  padding: 5px;
+}
+.navbar>header{
+  float: left;
+}
+li{
+  list-style: none;
+  display: block;
+  float: right;
+  margin-right: 20px;
+
+}
+.navbar-link{
+  text-decoration: none;
+  color: #41aea9;
+} */
+
+/* Navbar */
+
+.navbar{
+  display: flex;
+  background-color: var(--green);
+  text-align: center;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+.navbar-link{
+  text-decoration: none;
+  color: var(--deep-blue);
+  padding: 17px;
+  border-radius: 8px;
+}
+.navbar-link:hover{
+  opacity: 0.5;
+  background-color: var(--light-blue);
+}
+
+/* Welcome Section */
+
+.welcome-section{
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  text-align: center;
+  margin-top: 50px;
+  background: linear-gradient(45deg,#363737,#100c08);
+  color: var(--medium-blue);
+}
+.welcome-section>div{
+  padding-top: 200px;
+}
+h1{
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0.4rem;
+  color: var(--white);
+}
+.welcome-section p{
+  margin-top: 5px;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* Projects Section */
+
+.projects{
+  background-color: var(--light-blue);
+  padding: 100px;
+}
+h2{
+  color: var(--green);
+  text-decoration: underline;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.all-project{
+  text-align: center;
+}
+.project{
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  background-color: var(--medium-blue);
+}
+.project-link{
+  text-decoration: none;
+  color: var(--deep-blue);
+}
+
+.project-link span{
+  display: none;
+  color: var(--green);
+  font-weight: bold;
+}
+
+/* @keyframes visi {
+  to{
+    display: inline-block;
+  }
+} */
+
+.project-link:hover span{
+  /* animation: visi 1s; */
+  display: inline-block;
+}
+
+h3{
+  display: inline-block;
+}
+
+img{
+  width: 100%;
+  height: 300px;
+  display: inline-block;
+}
+
+.show{
+  position: absolute;
+  left: 45.75%;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--deep-blue);
+  padding: 11px;
+  border-radius: 5px;
+}
+
+@keyframes hori {
+  0%{
+    left: 0px;
+  }
+  100%{
+    left: 4px;
+  }
+}
+
+.show span{
+  margin-left: 3px;
+  position: relative;
+}
+
+.show:hover span{
+  animation: hori 1s;
+  left: 4px;
+}
+
+.show:hover{
+  padding: 11 15px;
+  background-color: var(--green);
+  transition: 1s;
+}
+
+/* Contacts */
+
+#contacts{
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: var(--green);
+}
+
+
+.icons{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.contact-link{
+  text-decoration: none;
+  color: var(--white);
+  position: relative;
+  margin: 0 10px;
+  padding: 9px;
+}
+
+@keyframes downGo {
+  0%{
+    top: 0px;
+  }
+  /* 25%{
+    top: 2.5px;
+  }
+  50%{
+    top: 5px;
+  }
+  75%{
+    top: 7.5px;
+  } */
+  100%{
+    top: 10px;
+  }
+}
+
+.contact-link:hover{
+  animation: downGo 0.5s ease-in-out 0s 1;
+  top: 10px;
+}
+
+.contact-link span{
+  margin: 0 0 0 10px;
+}
